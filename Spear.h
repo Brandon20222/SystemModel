@@ -5,10 +5,12 @@ class Spear :
     public Weapon
 {
 private:
+    const string weaponType = "Spear";
+
 public:
     //Constructors
     Spear();
-    Spear(double doesDamage);
+    Spear(double doesDamage,string level);
     // Redefined virtual functions 
     string swingType()const override;
     string finisherMove()const override;

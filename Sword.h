@@ -12,7 +12,7 @@ private:
 public:
     //Constructors
     Sword();
-    Sword(double doesDamage);
+    Sword(double doesDamage,string level);
     //Getters and setters
     // Redefined virtual functions 
     string swingType()const override;

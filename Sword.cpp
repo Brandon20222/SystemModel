@@ -5,9 +5,9 @@
 Sword::Sword() : Weapon(){
 	
 }
-Sword::Sword(double doesDamage)  {
+Sword::Sword(double doesDamage,string level)  {
 	setDoesDamage(doesDamage);
-
+	setWeaponLevel(level);
 }
 
 // Redefined virtual functions 
@@ -17,16 +17,16 @@ string Sword::finisherMove()const {
 }
 
 string Sword::swingType()const {
-	return "Slashes Player 2 doing " + to_string(getDoesDamage()) + " damage";
+	return "Slash, which does " + to_string(getDoesDamage()) + " damage";
 }
 std::ostream& Sword::attack(std::ostream& strm)const {
-	strm << "Player 1 " << swingType() << endl;
+	strm << swingType() << endl;
 
 	return strm;
 }
 
 std::ostream& Sword::weaponLevelDesc(std::ostream& strm)const {
-	strm << "Player 1's weapon type = " << weaponType << endl;
-	strm << "Player 1's weapon level = " + getWeaponLevel();
+	strm << "Weapon type = " << weaponType << endl;
+	strm << "Weapon level = " + getWeaponLevel();
 	return strm;
 }
